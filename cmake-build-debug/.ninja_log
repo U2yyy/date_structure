@@ -1,0 +1,5 @@
+# ninja log v5
+1	87	6756973283875283	CMakeFiles/dynamicArray.dir/main.c.obj	edffaa75f015c9d0
+169	594	6756973288911964	dynamicArray.exe	5f36b854ca539145
+1	214	6756978159609352	CMakeFiles/copyone.dir/copyone.c.obj	e388e994ffcd0e0f
+214	574	6756978163189825	copyone.exe	153e16a45772fe66
