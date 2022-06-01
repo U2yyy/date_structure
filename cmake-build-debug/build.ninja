@@ -51,7 +51,7 @@ build cmake_object_order_depends_target_dynamicArray: phony || CMakeFiles/dynami
 
 build CMakeFiles/dynamicArray.dir/main.c.obj: C_COMPILER__dynamicArray_Debug E$:/dynamicArray/main.c || cmake_object_order_depends_target_dynamicArray
   DEP_FILE = CMakeFiles\dynamicArray.dir\main.c.obj.d
-  FLAGS = -g -std=gnu90
+  FLAGS = -std=c99 -pedantic -g -std=gnu99
   OBJECT_DIR = CMakeFiles\dynamicArray.dir
   OBJECT_FILE_DIR = CMakeFiles\dynamicArray.dir
 
@@ -64,7 +64,7 @@ build CMakeFiles/dynamicArray.dir/main.c.obj: C_COMPILER__dynamicArray_Debug E$:
 # Link the executable dynamicArray.exe
 
 build dynamicArray.exe: C_EXECUTABLE_LINKER__dynamicArray_Debug CMakeFiles/dynamicArray.dir/main.c.obj
-  FLAGS = -g
+  FLAGS = -std=c99 -pedantic -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\dynamicArray.dir
   POST_BUILD = cd .
@@ -84,7 +84,7 @@ build cmake_object_order_depends_target_copyone: phony || CMakeFiles/copyone.dir
 
 build CMakeFiles/copyone.dir/copyone.c.obj: C_COMPILER__copyone_Debug E$:/dynamicArray/copyone.c || cmake_object_order_depends_target_copyone
   DEP_FILE = CMakeFiles\copyone.dir\copyone.c.obj.d
-  FLAGS = -g -std=gnu90
+  FLAGS = -std=c99 -pedantic -g -std=gnu99
   OBJECT_DIR = CMakeFiles\copyone.dir
   OBJECT_FILE_DIR = CMakeFiles\copyone.dir
 
@@ -97,7 +97,7 @@ build CMakeFiles/copyone.dir/copyone.c.obj: C_COMPILER__copyone_Debug E$:/dynami
 # Link the executable copyone.exe
 
 build copyone.exe: C_EXECUTABLE_LINKER__copyone_Debug CMakeFiles/copyone.dir/copyone.c.obj
-  FLAGS = -g
+  FLAGS = -std=c99 -pedantic -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\copyone.dir
   POST_BUILD = cd .
