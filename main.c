@@ -8,6 +8,7 @@ struct dynamicArray{
     int arr_capacity;//数组的容量
 };
 //这里的init_dynamicArray结构体定义为指针是为了传值给数组
+//定义一个用来初始化的数组，有点类似于函数的功能
 struct dynamicArray *init_dynamicArray(int capacity){
     if(capacity <= 0)
         return NULL;
@@ -26,7 +27,7 @@ void insert_dynamicArray(struct dynamicArray *array,int pos,void* date){
     if(pos<0||pos>array->arr_size)
         pos = array->arr_size;
     //判断是否需要进行动态扩展
-    if(pos == array->arr_capacity){
+    if(array->arr_size == array->arr_capacity){
         //1.计算新空间大小
         int newCapacity = array->arr_capacity * 2;
         //2.分配新的内存空间
@@ -66,19 +67,91 @@ void foreach_dynamicArray(struct dynamicArray *array,void(* myPrint)(void*)){
         myPrint(array->pArr[i]);
     }
 }
+//删除数组元素
+    //按位置删除
+void deletebypos_dynamicArray(struct dynamicArray *array,int pos){
+    if(array == NULL)
+        return;
+    if(pos<0||pos>array->arr_size-1)
+        return;
+    for(int i=pos;i<array->arr_size;i++){
+        array->pArr[i] = array->pArr[i+1];
+    }
+    array->arr_size--;
+}
+//定义回调函数用于比较
+int myCompareval(void* date1,void* date2){
+    struct Studentsore *p1 = date1;
+    struct Studentsore *p2 = date2;
+
+    if(strcmp(p1->name,p2->name)==0&&p1->score==p2->score)
+        return 1;
+    else
+        return 0;
+}
+    //按元素删除，这里使用回调函数进行比较，因为比较两个指针是没有意义的
+void deletebyval_dynamicArray(struct dynamicArray *array,void* date,int(myComepare)(void*,void*)){
+    if(array == NULL)
+        return;
+    if(date == NULL)
+        return;
+    for(int i=0;i<array->arr_size;i++){
+        if(myComepare(array->pArr[i],date))
+            deletebypos_dynamicArray(array,i);
+    }
+}
+//整个数组的销毁
+void destroy(struct dynamicArray *array){
+    if(array == NULL)
+        return;
+    if(array->pArr == NULL) {
+        free(array->pArr);
+        array->arr_size == NULL;
+    }
+    free(array);
+    array == NULL;
+}
 int main() {
     int n;
     struct dynamicArray *Array = init_dynamicArray(5);
-    printf("size = %d\ncapacity = %d\n",Array->arr_size,Array->arr_capacity);
+    printf("before adding:size = %d  capacity = %d\n",Array->arr_size,Array->arr_capacity);
     //数据处理
     struct Studentsore stu1 = {"yme",100};
     struct Studentsore stu2 = {"ljd",99};
     struct Studentsore stu3 = {"MC",10};
+    struct Studentsore stu4 = {"QM",30};
+    struct Studentsore stu5 = {"WXS",0};
+    struct Studentsore stu6 = {"lbw",66};
+    struct Studentsore stu7 = {"pdd",22};
+    struct Studentsore stu8 = {"sekiro",101};
     //将数据插入
     insert_dynamicArray(Array,-1,&stu1);
     insert_dynamicArray(Array,0,&stu2);
     insert_dynamicArray(Array,4,&stu3);
+    insert_dynamicArray(Array,20,&stu4);
+    insert_dynamicArray(Array,99,&stu5);
+    insert_dynamicArray(Array,2,&stu6);
+    insert_dynamicArray(Array,3,&stu7);
+    insert_dynamicArray(Array,0,&stu8);
     //遍历数据
     foreach_dynamicArray(Array,myPrintscore);
+    //看一下数组的容量和元素个数是否更新
+    printf("after adding:size = %d  capacity = %d\n",Array->arr_size,Array->arr_capacity);
+    //按位置删除,pos=3,因此删除第四个元素
+    deletebypos_dynamicArray(Array,3);
+    printf("---------------------------------------\n");
+    foreach_dynamicArray(Array,myPrintscore);
+    printf("after deleting1:size = %d  capacity = %d\n",Array->arr_size,Array->arr_capacity);
+    //按值删除元素
+    printf("---------------------------------------\n");
+    struct Studentsore badguy = {"WXS",0};
+    deletebyval_dynamicArray(Array,&badguy,myCompareval);
+    foreach_dynamicArray(Array,myPrintscore);
+    printf("after deleting2:size = %d  capacity = %d\n",Array->arr_size,Array->arr_capacity);
+    printf("---------------------------------------\n");
+    //释放掉全部的内存空间，没有什么实际的效果，但是过一段时间也许就会被别的程序占用了
+    destroy(Array);
+    foreach_dynamicArray(Array,myPrintscore);
+    printf("after destroy:size = %d  capacity = %d\n",Array->arr_size,Array->arr_capacity);
     return 0;
 }
