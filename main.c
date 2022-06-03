@@ -67,6 +67,77 @@ void foreach_LinkList(linklist list,void(*myPrint)(void*)){
         pCurrent = pCurrent->next;
     }
 }
+//根据位置删除结点
+void deletebypos(linklist list,int pos){
+    struct LinkList *myList = list;
+    if(list == NULL)
+        return;
+    if(pos < 0 || pos > myList->size-1)
+        return;
+    struct LinkNode *pCurrent = &myList->pHeader;
+    for(int i=0;i<pos;i++){
+        pCurrent = pCurrent->next;
+    }
+    struct LinkNode *delNode = pCurrent->next;
+    pCurrent->next = delNode->next;
+    delNode->next = NULL;
+    free(delNode);
+    myList->size--;
+}
+//定义回调比较函数
+int myComparebyvalue(void* date1,void* date2){
+    struct PC *p1 = date1;
+    struct PC *p2 = date2;
+    if(strcmp(p1->name,p2->name)==0&&p1->price==p2->price)
+        return 1;
+    else
+        return 0;
+}
+//根据值删除结点
+void deletebyvalue(linklist list,void* date,int (*myCompare)(void*,void*)){
+    if(list == NULL)
+        return;
+    if(date == NULL)
+        return;
+    struct LinkList *myList = list;
+    struct LinkNode *pCurrent = myList->pHeader.next;
+    struct LinkNode *pPre = &myList->pHeader;
+    while(myCompare(pCurrent->date,date) != 1){
+        pCurrent = pCurrent->next;
+        pPre = pPre->next;
+    }
+    pPre->next = pCurrent->next;
+    pCurrent->next = NULL;
+    free(pCurrent);
+    myList->size--;
+}
+//清除所有链表结点数据及释放空间
+void clear(linklist list){
+    if(list == NULL)
+        return;
+    struct LinkList *myList = list;
+    struct LinkNode *pCurrent = myList->pHeader.next;
+    for(int i=0;i<myList->size;i++){
+        struct LinkNode *pmid = pCurrent;
+        free(pCurrent);
+        pCurrent = pmid;
+        myList->size--;
+    }
+}
+//销毁链表
+void destroy(linklist list){
+    if(list == NULL)
+        return;
+    clear(list);
+    free(list);
+}
+//返回链表结点数
+int retsize(linklist list){
+    if(list == NULL)
+        return NULL;
+    struct LinkList *myList = list;
+    return myList->size;
+}
  int main() {
     linklist myList = init_LinkList();
     //输入数据
@@ -83,5 +154,13 @@ void foreach_LinkList(linklist list,void(*myPrint)(void*)){
     insert_LinkList(myList,1,&pc5);
     //遍历
     foreach_LinkList(myList,myPrintPC);
+    deletebypos(myList,1);
+    printf("--------------------------------------------------------------------------------------\n");
+    foreach_LinkList(myList,myPrintPC);
+    struct PC test1 = {"Lenovo",4999,"just-so-so"};
+    deletebyvalue(myList,&test1,myComparebyvalue);
+    printf("--------------------------------------------------------------------------------------\n");
+    foreach_LinkList(myList,myPrintPC);
+    printf("now the size of the Linklist is %d", retsize(myList));
     return 0;
 }
