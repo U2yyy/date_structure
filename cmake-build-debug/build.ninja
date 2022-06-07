@@ -73,6 +73,39 @@ build StackbyArr.exe: C_EXECUTABLE_LINKER__StackbyArr_Debug CMakeFiles/StackbyAr
   TARGET_IMPLIB = libStackbyArr.dll.a
   TARGET_PDB = StackbyArr.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target StackbyLink
+
+
+#############################################
+# Order-only phony target for StackbyLink
+
+build cmake_object_order_depends_target_StackbyLink: phony || CMakeFiles/StackbyLink.dir
+
+build CMakeFiles/StackbyLink.dir/StackbyLink.c.obj: C_COMPILER__StackbyLink_Debug E$:/Stack/StackbyLink.c || cmake_object_order_depends_target_StackbyLink
+  DEP_FILE = CMakeFiles\StackbyLink.dir\StackbyLink.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\StackbyLink.dir
+  OBJECT_FILE_DIR = CMakeFiles\StackbyLink.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target StackbyLink
+
+
+#############################################
+# Link the executable StackbyLink.exe
+
+build StackbyLink.exe: C_EXECUTABLE_LINKER__StackbyLink_Debug CMakeFiles/StackbyLink.dir/StackbyLink.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\StackbyLink.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = StackbyLink.exe
+  TARGET_IMPLIB = libStackbyLink.dll.a
+  TARGET_PDB = StackbyLink.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -101,6 +134,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build StackbyArr: phony StackbyArr.exe
 
+build StackbyLink: phony StackbyLink.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -109,7 +144,7 @@ build StackbyArr: phony StackbyArr.exe
 #############################################
 # Folder: E:/Stack/cmake-build-debug
 
-build all: phony StackbyArr.exe
+build all: phony StackbyArr.exe StackbyLink.exe
 
 # =============================================================================
 # Built-in targets

@@ -1,3 +1,4 @@
 E:/Stack/cmake-build-debug/CMakeFiles/StackbyArr.dir
+E:/Stack/cmake-build-debug/CMakeFiles/StackbyLink.dir
 E:/Stack/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/Stack/cmake-build-debug/CMakeFiles/rebuild_cache.dir
