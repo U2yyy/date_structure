@@ -1,0 +1,11 @@
+# ninja log v5
+2	83	6765822449908415	CMakeFiles/Bubble_sort.dir/Bubble_sort.c.obj	d42a64950f9a564c
+83	189	6765822450945646	Bubble_sort.exe	be3c92d4c53239dc
+0	86	6765827671734988	CMakeFiles/selection_sort.dir/selection_sort.c.obj	37259c808deaebbc
+87	194	6765827672791843	selection_sort.exe	9775071832a46bfc
+1	79	6765828447884940	CMakeFiles/selection_sort.dir/selection_sort.c.obj	37259c808deaebbc
+80	189	6765828448962069	selection_sort.exe	9775071832a46bfc
+1	83	6765830687721789	CMakeFiles/selection_sort.dir/selection_sort.c.obj	37259c808deaebbc
+83	193	6765830688789249	selection_sort.exe	9775071832a46bfc
+1	82	6765831806446400	CMakeFiles/selection_sort.dir/selection_sort.c.obj	37259c808deaebbc
+82	190	6765831807491331	selection_sort.exe	9775071832a46bfc
