@@ -22,7 +22,7 @@ void myPrint(int *a,int length){
 }
 int main(){
     int arr[] = {9,10,99,88,12,19,2,82,56};
-    int length = sizeof(arr)/ sizeof(int);
+    int length = sizeof(arr) / sizeof(int);
     myPrint(arr,length);
     printf("\n--------------------------------\n");
     selection_sort(arr,length);
