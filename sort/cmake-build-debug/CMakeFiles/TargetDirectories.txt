@@ -1,0 +1,5 @@
+E:/sort/cmake-build-debug/CMakeFiles/Bubble_sort.dir
+E:/sort/cmake-build-debug/CMakeFiles/selection_sort.dir
+E:/sort/cmake-build-debug/CMakeFiles/insert_sort.dir
+E:/sort/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/sort/cmake-build-debug/CMakeFiles/rebuild_cache.dir
