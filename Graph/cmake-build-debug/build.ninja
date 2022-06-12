@@ -39,7 +39,7 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = E$:/Graph/cmake-build-debug/
+cmake_ninja_workdir = E$:/date_structure/Graph/cmake-build-debug/
 # =============================================================================
 # Object build statements for EXECUTABLE target directed_graph
 
@@ -49,8 +49,8 @@ cmake_ninja_workdir = E$:/Graph/cmake-build-debug/
 
 build cmake_object_order_depends_target_directed_graph: phony || CMakeFiles/directed_graph.dir
 
-build CMakeFiles/directed_graph.dir/undirected_graph.c.obj: C_COMPILER__directed_graph_Debug E$:/Graph/undirected_graph.c || cmake_object_order_depends_target_directed_graph
-  DEP_FILE = CMakeFiles\directed_graph.dir\undirected_graph.c.obj.d
+build CMakeFiles/directed_graph.dir/undirected_graph_Matrix.c.obj: C_COMPILER__directed_graph_Debug E$:/date_structure/Graph/undirected_graph_Matrix.c || cmake_object_order_depends_target_directed_graph
+  DEP_FILE = CMakeFiles\directed_graph.dir\undirected_graph_Matrix.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\directed_graph.dir
   OBJECT_FILE_DIR = CMakeFiles\directed_graph.dir
@@ -63,7 +63,7 @@ build CMakeFiles/directed_graph.dir/undirected_graph.c.obj: C_COMPILER__directed
 #############################################
 # Link the executable directed_graph.exe
 
-build directed_graph.exe: C_EXECUTABLE_LINKER__directed_graph_Debug CMakeFiles/directed_graph.dir/undirected_graph.c.obj
+build directed_graph.exe: C_EXECUTABLE_LINKER__directed_graph_Debug CMakeFiles/directed_graph.dir/undirected_graph_Matrix.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\directed_graph.dir
@@ -73,12 +73,45 @@ build directed_graph.exe: C_EXECUTABLE_LINKER__directed_graph_Debug CMakeFiles/d
   TARGET_IMPLIB = libdirected_graph.dll.a
   TARGET_PDB = directed_graph.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target undirected_graph_Form
+
+
+#############################################
+# Order-only phony target for undirected_graph_Form
+
+build cmake_object_order_depends_target_undirected_graph_Form: phony || CMakeFiles/undirected_graph_Form.dir
+
+build CMakeFiles/undirected_graph_Form.dir/undirected_graph_Form.c.obj: C_COMPILER__undirected_graph_Form_Debug E$:/date_structure/Graph/undirected_graph_Form.c || cmake_object_order_depends_target_undirected_graph_Form
+  DEP_FILE = CMakeFiles\undirected_graph_Form.dir\undirected_graph_Form.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\undirected_graph_Form.dir
+  OBJECT_FILE_DIR = CMakeFiles\undirected_graph_Form.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target undirected_graph_Form
+
+
+#############################################
+# Link the executable undirected_graph_Form.exe
+
+build undirected_graph_Form.exe: C_EXECUTABLE_LINKER__undirected_graph_Form_Debug CMakeFiles/undirected_graph_Form.dir/undirected_graph_Form.c.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\undirected_graph_Form.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = undirected_graph_Form.exe
+  TARGET_IMPLIB = libundirected_graph_Form.dll.a
+  TARGET_PDB = undirected_graph_Form.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Graph\cmake-build-debug && "E:\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\date_structure\Graph\cmake-build-debug && "E:\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -89,7 +122,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Graph\cmake-build-debug && "E:\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\Graph -BE:\Graph\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\date_structure\Graph\cmake-build-debug && "E:\CLion 2022.1.1\bin\cmake\win\bin\cmake.exe" --regenerate-during-build -SE:\date_structure\Graph -BE:\date_structure\Graph\cmake-build-debug"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -101,15 +134,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build directed_graph: phony directed_graph.exe
 
+build undirected_graph_Form: phony undirected_graph_Form.exe
+
 # =============================================================================
 # Folder targets.
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Graph/cmake-build-debug
+# Folder: E:/date_structure/Graph/cmake-build-debug
 
-build all: phony directed_graph.exe
+build all: phony directed_graph.exe undirected_graph_Form.exe
 
 # =============================================================================
 # Built-in targets

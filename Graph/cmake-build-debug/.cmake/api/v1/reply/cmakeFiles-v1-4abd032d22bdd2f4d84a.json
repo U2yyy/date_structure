@@ -105,8 +105,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "E:/Graph/cmake-build-debug",
-		"source" : "E:/Graph"
+		"build" : "E:/date_structure/Graph/cmake-build-debug",
+		"source" : "E:/date_structure/Graph"
 	},
 	"version" : 
 	{

@@ -1,6 +1,12 @@
 # ninja log v5
-1	135	6767317171357690	build.ninja	5096457c5dd6b790
-81	188	6767314574287482	directed_graph.exe	d488fee446227aec
-1	80	6767314573239970	CMakeFiles/directed_graph.dir/directed_graph.c.obj	c81752429d7b1597
-1	87	6767317200504635	CMakeFiles/directed_graph.dir/undirected_graph.c.obj	d0c8e0edc9b0e0d9
+1	135	6767399723508247	build.ninja	5096457c5dd6b790
 88	199	6767317201601420	directed_graph.exe	b5ad3118c415b742
+1	92	6767405672532413	CMakeFiles/undirected_graph_Form.dir/undirected_graph_Form.c.obj	67e3c4bcf9c2de35
+93	210	6767405673689634	undirected_graph_Form.exe	c86ef5609240d4f
+1	94	6767406169535277	CMakeFiles/directed_graph.dir/undirected_graph_Matrix.c.obj	358cf7673d5e7328
+94	201	6767406170572818	directed_graph.exe	5ae59360ef644ff7
+2	113	6767416344131260	directed_graph.exe	5ae59360ef644ff7
+2	81	6767416377916262	CMakeFiles/undirected_graph_Form.dir/undirected_graph_Form.c.obj	67e3c4bcf9c2de35
+81	188	6767416378963373	undirected_graph_Form.exe	c86ef5609240d4f
+1	77	6767416485846544	CMakeFiles/undirected_graph_Form.dir/undirected_graph_Form.c.obj	67e3c4bcf9c2de35
+78	183	6767416486883771	undirected_graph_Form.exe	c86ef5609240d4f
