@@ -1,54 +1,54 @@
 //
 // Created by Programmer on 2022/6/12.
 //
-//¶¨Òå×î´ó¶¥µãÊıÁ¿
+//å®šä¹‰æœ€å¤§é¡¶ç‚¹æ•°é‡
 #define MaxVertex 10
 #include <stdio.h>
 #include <string.h>
-//¶¨Òå¶¥µãÃû³Æ
+//å®šä¹‰é¡¶ç‚¹åç§°
 typedef char VertexInfo[9];
-//¶¨Òå±ßµÄ¹ØÏµÊı×é
+//å®šä¹‰è¾¹çš„å…³ç³»æ•°ç»„
 typedef int EdgeInfo[MaxVertex][MaxVertex];
-//¶¨ÒåÍ¼µÄ½á¹¹Ìå
+//å®šä¹‰å›¾çš„ç»“æ„ä½“
 typedef struct graph{
-    //¶¨ÒåÍ¼ºÍ±ßµÄÊıÁ¿
+    //å®šä¹‰å›¾å’Œè¾¹çš„æ•°é‡
     int vertexNum;
     int edgeNum;
-    //¶¨Òå¶¥µã£¨vertex£©µÄÃû³Æ,ÕâÀïµÈ¼ÛÓÚchar vertex[MaxVertex][9],¼´Ã¿Ò»ĞĞ¶ÔÓ¦µÄÊÇÒ»¸ö¶¥µãµÄÃû³Æ
+    //å®šä¹‰é¡¶ç‚¹ï¼ˆvertexï¼‰çš„åç§°,è¿™é‡Œç­‰ä»·äºchar vertex[MaxVertex][9],å³æ¯ä¸€è¡Œå¯¹åº”çš„æ˜¯ä¸€ä¸ªé¡¶ç‚¹çš„åç§°
     VertexInfo vertex[MaxVertex];
-    //¶¨Òå¶şÎ¬Êı×éÓÃÓÚ¶¨Òå±ß£¨edge£©
+    //å®šä¹‰äºŒç»´æ•°ç»„ç”¨äºå®šä¹‰è¾¹ï¼ˆedgeï¼‰
     EdgeInfo Edge;
 }MakeMyGraph;
-//Ö®Ç°ÏëÖ±½ÓÓÃ&ÒıÓÃ£¬·¢ÏÖ²»ÄÜÓÃ£¬²éÔÄ×ÊÁÏÖ®ºó·¢ÏÖÕâ¸öºÃÏñÊÇc++ÌØÓĞµÄ¹¦ÄÜ£¬Òò´ËÎÒÃÇ»¹ÊÇÍùÀïÃæ´«Ö¸Õë
+//ä¹‹å‰æƒ³ç›´æ¥ç”¨&å¼•ç”¨ï¼Œå‘ç°ä¸èƒ½ç”¨ï¼ŒæŸ¥é˜…èµ„æ–™ä¹‹åå‘ç°è¿™ä¸ªå¥½åƒæ˜¯c++ç‰¹æœ‰çš„åŠŸèƒ½ï¼Œå› æ­¤æˆ‘ä»¬è¿˜æ˜¯å¾€é‡Œé¢ä¼ æŒ‡é’ˆ
 int findLocation(MakeMyGraph *graph,VertexInfo v){
     int temp = -1;
     for(int i=0;i<graph->vertexNum;i++){
         if(strcmp(graph->vertex[i],v) == 0)
             temp = i;
     }
-    return temp;//Èô·µ»ØÖµÎª-1ËµÃ÷Ã»ÕÒµ½
+    return temp;//è‹¥è¿”å›å€¼ä¸º-1è¯´æ˜æ²¡æ‰¾åˆ°
 }
 void test1(){
     MakeMyGraph myGraph;
-    printf("ÇëÊäÈë¶¥µã£¨vertex£©µÄÊıÁ¿ºÍ±ß£¨edge£©µÄÊıÁ¿£º\n");
+    printf("è¯·è¾“å…¥é¡¶ç‚¹ï¼ˆvertexï¼‰çš„æ•°é‡å’Œè¾¹ï¼ˆedgeï¼‰çš„æ•°é‡ï¼š\n");
     scanf("%d %d",&myGraph.vertexNum,&myGraph.edgeNum);
-    printf("ÇëÒÀ´ÎÊäÈëÃ¿¸ö¶¥µãµÄÃû³Æ\n");
+    printf("è¯·ä¾æ¬¡è¾“å…¥æ¯ä¸ªé¡¶ç‚¹çš„åç§°\n");
     for(int i=0;i<myGraph.vertexNum;i++){
         scanf("%s",myGraph.vertex[i]);
     }
-    //³õÊ¼»¯ËùÓĞ±ßµÄÖµ
+    //åˆå§‹åŒ–æ‰€æœ‰è¾¹çš„å€¼
     for(int i=0;i<myGraph.edgeNum;i++){
         for(int j=0;j<myGraph.edgeNum;j++){
             myGraph.Edge[i][j] = 0;
         }
     }
     for(int i=0;i<myGraph.edgeNum;i++) {
-        printf("ÇëÒÀ´ÎÊäÈëÁ½¸ö¶¥µãÀ´±íÊ¾Á½¸öµã¾ßÓĞ¹ØÏµ\n");
-        VertexInfo temp1, temp2;//¶¨ÒåÁ½¸öÁÙÊ±±äÁ¿´¢´æÊäÈëÖµ
+        printf("è¯·ä¾æ¬¡è¾“å…¥ä¸¤ä¸ªé¡¶ç‚¹æ¥è¡¨ç¤ºä¸¤ä¸ªç‚¹å…·æœ‰å…³ç³»\n");
+        VertexInfo temp1, temp2;//å®šä¹‰ä¸¤ä¸ªä¸´æ—¶å˜é‡å‚¨å­˜è¾“å…¥å€¼
         scanf("%s %s", temp1, temp2);
         int v1 = findLocation(&myGraph, temp1);
         int v2 = findLocation(&myGraph, temp2);
-        //¶ÔÓÚÎŞÏòÍ¼£¬Èç¹ûÊäÈëµÄÕâÁ½¸ö¶¨µã´æÔÚ£¬ÄÇÃ´¶ÔÁ½¸ö¶¥µãÀ´Ëµ¿Ï¶¨ÊÇÏàÁ¬¹ØÏµ
+        //å¯¹äºæ— å‘å›¾ï¼Œå¦‚æœè¾“å…¥çš„è¿™ä¸¤ä¸ªå®šç‚¹å­˜åœ¨ï¼Œé‚£ä¹ˆå¯¹ä¸¤ä¸ªé¡¶ç‚¹æ¥è¯´è‚¯å®šæ˜¯ç›¸è¿å…³ç³»
         if (v1 != -1 && v2 != -1) {
             myGraph.Edge[v1][v2] = 1;
             myGraph.Edge[v2][v1] = 1;
