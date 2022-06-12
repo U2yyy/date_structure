@@ -1,0 +1,6 @@
+# ninja log v5
+1	135	6767305931083689	build.ninja	5096457c5dd6b790
+1	229	6767312947308326	CMakeFiles/directed_graph.dir/directed_graph.c.obj	c81752429d7b1597
+230	682	6767312951803661	directed_graph.exe	d488fee446227aec
+1	80	6767314573239970	CMakeFiles/directed_graph.dir/directed_graph.c.obj	c81752429d7b1597
+81	188	6767314574287482	directed_graph.exe	d488fee446227aec
