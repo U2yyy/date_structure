@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Graph"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="directed_graph">
+				<Option output="E:/date_structure/Graph/cmake-build-debug/directed_graph.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 directed_graph"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="directed_graph/fast">
+				<Option output="E:/date_structure/Graph/cmake-build-debug/directed_graph.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 directed_graph/fast"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="undirected_graph_Form">
+				<Option output="E:/date_structure/Graph/cmake-build-debug/undirected_graph_Form.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 undirected_graph_Form"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="undirected_graph_Form/fast">
+				<Option output="E:/date_structure/Graph/cmake-build-debug/undirected_graph_Form.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../include"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed"/>
+					<Add directory="E:/CLion 2022.1.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 undirected_graph_Form/fast"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="E:/date_structure/Graph/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="E:/CLion 2022.1.1/bin/mingw/bin/mingw32-make.exe -f &quot;E:/date_structure/Graph/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="E:/date_structure/Graph/undirected_graph_Form.c">
+			<Option target="undirected_graph_Form"/>
+		</Unit>
+		<Unit filename="E:/date_structure/Graph/undirected_graph_Matrix.c">
+			<Option target="directed_graph"/>
+		</Unit>
+		<Unit filename="E:/date_structure/Graph/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
