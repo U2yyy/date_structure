@@ -32,6 +32,7 @@ int findLocation(struct LinkGraph *graph,char v[99]){
     for(int i=0;i<graph->VertexNum;i++){
         if(strcmp(graph->vertex[i].name,v) == 0)
             temp = i;
+        break;
     }
     return temp;//若返回值为-1说明没找到
 }
@@ -47,15 +48,17 @@ void test1(){
     for(int i=0;i<myGraph.EdgeNum;i++) {
         char v1[99],v2[99];
         printf("请输入互为邻接点的两个顶点\n");
-        scanf("%s %s",v1,v2);
+        scanf("%s%s",v1,v2);
         int temp1 = findLocation(&myGraph,v1);
         int temp2 = findLocation(&myGraph,v2);
-        //新建结点
-        struct EdgeNode *newEdge;
-        newEdge->position = temp2;
-        //采用头插法，效率更高
-        newEdge->next = myGraph.vertex[temp1].first;
-        myGraph.vertex[temp1].first = newEdge;
+        if(temp1!=-1&&temp2!=-1) {
+            //新建结点
+            struct EdgeNode *newEdge;
+            newEdge->position = temp2;
+            //采用头插法，效率更高
+            newEdge->next = myGraph.vertex[temp1].first;
+            myGraph.vertex[temp1].first = newEdge;
+        }
     }
 }
 int main(){

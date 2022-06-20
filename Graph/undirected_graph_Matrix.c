@@ -5,6 +5,8 @@
 #define MaxVertex 10
 #include <stdio.h>
 #include <string.h>
+//设置数组用来存取是否访问过该顶点的数据
+int visited[MaxVertex];
 //定义顶点名称
 typedef char VertexInfo[9];
 //定义边的关系数组
@@ -28,21 +30,40 @@ int findLocation(MakeMyGraph *graph,VertexInfo v){
     }
     return temp;//若返回值为-1说明没找到
 }
-void test1(){
+//深度遍历算法
+void DFS(MakeMyGraph *myGraph,int i){
+    visited[i] = 1;
+    printf("%s",myGraph->vertex[i]);
+    for(int j=0;j<myGraph->vertexNum;j++){
+        if(myGraph->Edge[i][j]==1&&visited[j]==0)
+            DFS(myGraph,j);
+    }
+}
+//上面的深度遍历算法只是针对一个顶点而言的，要对多个顶点进行遍历需要再在其之上套一个算法
+void DFSTraverse(MakeMyGraph *myGraph){
+    for(int i=0;i<myGraph->vertexNum;i++){
+        visited[i] = 0;
+    }
+    for(int i=0;i<myGraph->vertexNum;i++){
+        if(visited[i]==0)
+            DFS(myGraph,i);
+    }
+}
+void test1() {
     MakeMyGraph myGraph;
     printf("请输入顶点（vertex）的数量和边（edge）的数量：\n");
-    scanf("%d %d",&myGraph.vertexNum,&myGraph.edgeNum);
+    scanf("%d %d", &myGraph.vertexNum, &myGraph.edgeNum);
     printf("请依次输入每个顶点的名称\n");
-    for(int i=0;i<myGraph.vertexNum;i++){
-        scanf("%s",myGraph.vertex[i]);
+    for (int i = 0; i < myGraph.vertexNum; i++) {
+        scanf("%s", myGraph.vertex[i]);
     }
     //初始化所有边的值
-    for(int i=0;i<myGraph.edgeNum;i++){
-        for(int j=0;j<myGraph.edgeNum;j++){
+    for (int i = 0; i < myGraph.edgeNum; i++) {
+        for (int j = 0; j < myGraph.edgeNum; j++) {
             myGraph.Edge[i][j] = 0;
         }
     }
-    for(int i=0;i<myGraph.edgeNum;i++) {
+    for (int i = 0; i < myGraph.edgeNum; i++) {
         printf("请依次输入两个顶点来表示两个点具有关系\n");
         VertexInfo temp1, temp2;//定义两个临时变量储存输入值
         scanf("%s %s", temp1, temp2);
@@ -54,6 +75,8 @@ void test1(){
             myGraph.Edge[v2][v1] = 1;
         }
     }
+    //遍历该图
+    DFSTraverse(&myGraph);
 }
 int main(){
     test1();
