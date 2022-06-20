@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <string.h>
 #define MaxVertex 10
+//创建数组存储是否访问
+int visited[MaxVertex];
 //创造邻接点结构体
 struct EdgeNode{
     //记录这个结点的位置
@@ -36,6 +38,25 @@ int findLocation(struct LinkGraph *graph,char v[99]){
     }
     return temp;//若返回值为-1说明没找到
 }
+void DFS(struct LinkGraph *myGraph,int i){
+    visited[i] = 1;
+    printf("%s",myGraph->vertex[i].name);
+    struct EdgeNode *p = myGraph->vertex[i].first;
+    while(p){
+        if(visited[p->position]==0)
+            DFS(myGraph,p->position);
+        p = p->next;
+    }
+}
+void DFSreverse(struct LinkGraph *myGraph){
+    for(int i=0;i<myGraph->VertexNum;i++){
+        visited[i] = 0;
+    }
+    for(int i=0;i<myGraph->VertexNum;i++){
+        if(visited[i]==0)
+            DFS(myGraph,i);
+    }
+}
 void test1(){
     struct LinkGraph myGraph;
     printf("请输入顶点（vertex）的数量和边（edge）的数量：\n");
@@ -60,6 +81,7 @@ void test1(){
             myGraph.vertex[temp1].first = newEdge;
         }
     }
+    DFSreverse(&myGraph);
 }
 int main(){
     test1();
