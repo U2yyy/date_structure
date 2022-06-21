@@ -1,3 +1,4 @@
 E:/date_structure/BST/cmake-build-debug/CMakeFiles/BST.dir
+E:/date_structure/BST/cmake-build-debug/CMakeFiles/Practice.dir
 E:/date_structure/BST/cmake-build-debug/CMakeFiles/edit_cache.dir
 E:/date_structure/BST/cmake-build-debug/CMakeFiles/rebuild_cache.dir

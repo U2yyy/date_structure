@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,7 +31,8 @@
 					"name" : "BST",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -41,6 +43,13 @@
 					"id" : "BST::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-BST-Debug-d798bab7ee7ebd41d608.json",
 					"name" : "BST",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Practice::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Practice-Debug-e26efadb7c15148ea250.json",
+					"name" : "Practice",
 					"projectIndex" : 0
 				}
 			]
