@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-void myPrlong long(long long num,long long a,long long b){
+void myPrlong (long long num,long long a,long long b){
 	if(b==0){
 		cout<<"Inf";
 		return;
@@ -24,7 +24,7 @@ void myPrlong long(long long num,long long a,long long b){
 	if(num<0||a<0)
 		cout<<")";		
 }
-void simplify(long long &num,long long &a,long long &b){
+void simplify long(long long &num,long long &a,long long &b){
 	if(b==0)
 		return;
 	long long temp = -1;
