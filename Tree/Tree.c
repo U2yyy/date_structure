@@ -11,6 +11,7 @@ struct TreeNode{
 };
 //在本次代码实现中树结点占用的数据很少，不用初始化在堆上开辟内存
 //遍历函数
+// 中序遍历
 void foreach_Tree(struct TreeNode *root){
     if(root == NULL)
         return;
@@ -18,7 +19,31 @@ void foreach_Tree(struct TreeNode *root){
     foreach_Tree(root->lChild);
     printf("%c",root->Cha);
     foreach_Tree(root->rChild);
+    //这里其实相当于有一个return
+    return;
 }
+// 前序遍历
+/* 
+void foreach_Tree(struct TreeNode *root){
+    if(root==NULL)
+        return;
+    printf("%c",root->cha);
+    foreach_Tree(root->lChild);
+    foreach_Tree(root->rChild);
+    return;
+}
+*/
+// 后序遍历
+/* 
+void foreach_Tree(struct TreeNode *root){
+    if(root==NULL)
+        return;
+    foreach_Tree(root->lChild);
+    foreach_Tree(root->rChild);
+    printf("%c",root->cha);
+    return;
+}
+*/
 //求树的叶子数量
 void Leafnums(struct TreeNode *root,int *num){
     if(root == NULL)

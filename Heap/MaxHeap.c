@@ -10,9 +10,9 @@ struct MyHeap{
 
 typedef struct MyHeap *MaxHeap;
 
-MaxHeap init_MaxHeap(int MaxSize);//³õÊ¼»¯×î´ó¶Ñ 
-void Insert_MaxHeap(MaxHeap H,int MyWeight);//²åÈë
-int Delete_MaxHeap(MaxHeap H);//É¾³ý 
+MaxHeap init_MaxHeap(int MaxSize);//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+void Insert_MaxHeap(MaxHeap H,int MyWeight);//ï¿½ï¿½ï¿½ï¿½
+int Delete_MaxHeap(MaxHeap H);//É¾ï¿½ï¿½ 
 
 int main(){
 	
@@ -30,16 +30,16 @@ MaxHeap init_MaxHeap(int MaxSize){
 void Insert_MaxHeap(MaxHeap H,int MyWeight){
 	int i;
 	i = ++H->size;
-	//ÕâÀï»¹ºÜÓÐ±ØÒªÐ´Ò»¸öÅÐ¶Ï¶ÑÊÇ·ñÒÑÂúµÄÌõ¼þ±í´ïÊ½ 
+	//ï¿½ï¿½ï¿½ï»¹ï¿½ï¿½ï¿½Ð±ï¿½ÒªÐ´Ò»ï¿½ï¿½ï¿½Ð¶Ï¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ 
 	for( ;MyWeight > H->weight[i/2];i /= 2){
-		H->weight[i] = H->weight[i/2]; 
+		H->weight[i] = H->weight[i/2];
 	}
 	H->weight[i] = MyWeight;
 }
 
 int Delete_MaxHeap(MaxHeap H){
 	int MaxItem = H->weight[1];
-	int temp = MaxHeap[H->size--];
+	int temp = H->weight[H->size--];
 	int Parent,Child;
 	for(Parent = 1;Parent*2 <= H->size;Parent = Child){
 		Child = 2*Parent;
@@ -51,5 +51,5 @@ int Delete_MaxHeap(MaxHeap H){
 			H->weight[Parent] = H->weight[Child];
 	}
 	H->weight[Parent] = temp;
-	rerurn MaxItem;
+	return MaxItem;
 }
