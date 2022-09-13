@@ -19,8 +19,12 @@ int main(){
         tempA[k] = PopHeap(a,tempLen--);
     }
     for(int i=1;i<=len;i++){
-        printf("%d ",tempA[i]);
-    } 
+    	printf("%d ",tempA[i]);
+    }
+    printf("\n-------------------\n");
+	for(int i=1;i<=len;i++){
+    	printf("%d ",a[i]);
+    }  
     return 0;
 }
 
