@@ -34,7 +34,7 @@ void Swap(int *a,int *b){
 }
 
 void qSort(int A[],int left,int right){
-    if(right>left){
+    if(right-left>1){
         int pivot = median3(A,left,right);
         int i = left;
         int j = right-1;
@@ -48,7 +48,7 @@ void qSort(int A[],int left,int right){
             }
         }
         Swap(&A[i],&A[right-1]);
-        qSort(A,left,i-1);
+        qSort(A,left,i);
         qSort(A,i+1,right);
     }
 }
